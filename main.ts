@@ -16,14 +16,14 @@ while (true) {
   if (input.buttonIsPressed(Button.A) === true) {
     while (true) {
       // find distance from sonar
-        basic.clearScreen()
-        distanceToObject = sonar.ping(
-            DigitalPin.P1,
-            DigitalPin.P2,
-            PingUnit.Centimeters
-        )
+      basic.clearScreen()
+      distanceToObject = sonar.ping(
+        DigitalPin.P1,
+        DigitalPin.P2,
+        PingUnit.Centimeters
+      )
 
-        // turn if distance < 10
+      // turn if distance < 10
       if (distanceToObject < 10) {
         robotbit.StpCarMove(-10, 48)
         basic.pause(500)
